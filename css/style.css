@@ -337,6 +337,11 @@ main { position: relative; z-index: 1; }
 
 .glitch { position: relative; }
 
+.hero__name.glitch::before,
+.hero__name.glitch::after {
+  content: none;
+}
+
 .glitch::before,
 .glitch::after {
   content: attr(data-text);
