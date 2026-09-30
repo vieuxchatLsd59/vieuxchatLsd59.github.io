@@ -303,14 +303,14 @@
       if (/about/i.test(arg)) return COMMANDS.about();
       if (/skills/i.test(arg)) return COMMANDS.skills();
       if (/projects/i.test(arg)) return COMMANDS.projects();
-      if (/contact/i.test(arg)) return "mail: ismaelberrdbz@gmail.com\ngithub: github.com/vieuxchatLsd59";
+      if (/contact/i.test(arg)) return "mail: ismaelberrazzag@gmail.com\ngithub: github.com/vieuxchatLsd59";
       return `cat: ${arg}: aucun fichier de ce nom`;
     },
     github() {
       return "github : https://github.com/vieuxchatLsd59";
     },
     mail() {
-      return "mail : ismaelberrdbz@gmail.com";
+      return "mail : ismaelberrazzag@gmail.com";
     },
     clear() {
       return null;
