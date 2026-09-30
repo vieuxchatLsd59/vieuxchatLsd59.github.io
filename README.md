@@ -178,8 +178,8 @@ Discord `@vieuxchatlsd`
 ---
 
 > ⚠️ **À personnaliser :**
-> 1. Remplace `https://vieuxchatlsd59.github.io/` par l'URL réelle de ton portfolio
->    (GitHub Pages) une fois publié, ou supprime ces liens.
+> 1. Portfolio publié sur `https://vieuxchatlsd59.github.io/` — les liens du README
+>    pointent déjà vers la bonne adresse. ✅
 > 2. Ajoute le lien de ton profil TryHackMe quand il existe (actuellement :
 >    la page d'accueil est liée à la place).
 > 3. Si tu publies le code de KiteRider, **régénère les clés LoRaWAN**
