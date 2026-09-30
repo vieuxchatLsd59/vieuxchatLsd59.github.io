@@ -109,6 +109,26 @@
     "en train d'apprendre le css sur tryhackme",
   ];
 
+  const FULL_NAME = "ISMAEL BERRAZZAG";
+
+  function typeName() {
+    const el = $("#typedName");
+    if (!el) return;
+    if (REDUCED) {
+      el.textContent = FULL_NAME;
+      return;
+    }
+    let i = 0;
+    const step = () => {
+      i += 1;
+      el.textContent = FULL_NAME.slice(0, i);
+      if (i < FULL_NAME.length) {
+        setTimeout(step, 55 + Math.random() * 70);
+      }
+    };
+    setTimeout(step, 320);
+  }
+
   function typewriter() {
     const el = $("#typed");
     if (!el) return;
@@ -377,6 +397,7 @@
     cursor();
     reveals();
     rain();
+    typeName();
     typewriter();
     setTimeout(boot, 180);
   };
