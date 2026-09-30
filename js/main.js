@@ -126,7 +126,8 @@
         setTimeout(step, 55 + Math.random() * 70);
       }
     };
-    setTimeout(step, 320);
+    el.textContent = "";
+    step();
   }
 
   function typewriter() {
@@ -397,9 +398,9 @@
     cursor();
     reveals();
     rain();
-    typeName();
     typewriter();
     setTimeout(boot, 180);
+    setTimeout(typeName, 1450);
   };
 
   if (document.readyState === "loading") {
