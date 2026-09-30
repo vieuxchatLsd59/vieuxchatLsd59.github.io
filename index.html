@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Isamel Berrazzag — Développeur Front-End</title>
+<meta name="description" content="Portfolio d'Isamel Berrazzag, développeur front-end. Projets web, expérimentations CSS et parcours d'apprentissage." />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Isamel Berrazzag" />
+<meta property="og:title" content="Isamel Berrazzag — Développeur Front-End" />
+<meta property="og:description" content="Projets web, expérimentations CSS et parcours d'apprentissage." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' font-weight='700' fill='%2300ff9c' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="is-booting">
+
+<div class="boot" id="boot" aria-hidden="true">
+  <pre class="boot__log" id="bootLog"></pre>
+</div>
+
+<div class="fx" aria-hidden="true">
+  <canvas class="fx__rain" id="rain"></canvas>
+  <div class="fx__scan"></div>
+  <div class="fx__noise"></div>
+  <div class="fx__vignette"></div>
+</div>
+
+<div class="cursor" aria-hidden="true">
+  <span class="cursor__dot"></span>
+  <span class="cursor__label"></span>
+</div>
+
+<header class="top" id="top">
+  <div class="top__inner">
+    <a class="prompt" href="#top">
+      <span class="prompt__user">vieuxchatLsd59</span><span class="prompt__at">@</span><span class="prompt__host">portfolio</span><span class="prompt__pwd">:~$</span>
+    </a>
+    <nav class="top__nav" aria-label="Navigation principale">
+      <a href="#apropos"><span class="top__num">01</span> apropos</a>
+      <a href="#skills"><span class="top__num">02</span> skills</a>
+      <a href="#projets"><span class="top__num">03</span> projets</a>
+      <a href="#parcours"><span class="top__num">04</span> parcours</a>
+      <a href="#contact"><span class="top__num">05</span> contact</a>
+    </nav>
+    <a class="btn btn--solid" href="https://github.com/vieuxchatLsd59" target="_blank" rel="noopener noreferrer">github</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero__ascii" aria-hidden="true">
+<pre>
+ ██╗███████╗███╗   ███╗███████╗██╗
+ ██║██╔════╝████╗ ████║██╔════╝██║
+ ██║█████╗  ██╔████╔██║█████╗  ██║
+ ██║██╔══╝  ██║╚██╔╝██║██╔══╝  ██║
+ ██║███████╗██║ ╚═╝ ██║███████╗███████╗
+ ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝╚══════╝
+</pre>
+    </div>
+
+    <h1 class="hero__name glitch" data-text="ISAMEL BERRAZZAG">ISAMEL BERRAZZAG</h1>
+
+    <p class="hero__role">
+      <span class="hero__prompt">&gt;</span>
+      <span id="typed" class="typed"></span><span class="caret" aria-hidden="true"></span>
+    </p>
+
+    <p class="hero__lead">
+      Développeur front-end &amp; embarqué. Je conçois des interfaces web qui vivent
+      (canvas, CSS, animations) et je programme des cartes ESP32 qui transmettent
+      leur position et la météo en LoRaWAN. Tout est écrit à la main, sans
+      dépendance, sans builder.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#projets">voir les projets</a>
+      <a class="btn" href="mailto:ismaelberrdbz@gmail.com">mailto: ismaelberrdbz@gmail.com</a>
+    </div>
+
+    <ul class="stats reveal">
+      <li class="stat"><span class="stat__num" data-count="2">0</span><span class="stat__key">projets publiés</span></li>
+      <li class="stat"><span class="stat__num" data-count="0" data-suffix=" dépendance">0</span><span class="stat__key">npm install</span></li>
+      <li class="stat"><span class="stat__num" data-count="100" data-suffix=" %">0</span><span class="stat__key">codé à la main</span></li>
+      <li class="stat"><span class="stat__num" data-count="24" data-suffix="/7">0</span><span class="stat__key">en veille</span></li>
+    </ul>
+
+    <p class="hero__hint" aria-hidden="true">↓ scroll pour continuer</p>
+  </section>
+
+  <section class="section" id="apropos">
+    <div class="wrap">
+      <p class="section__tag reveal"><span class="section__hash">##</span> 01 — à propos</p>
+      <h2 class="section__title reveal">Un éditeur de texte,<br />une potion de café,<br />et beaucoup de CSS.</h2>
+
+      <div class="grid grid--2">
+        <div class="reveal">
+          <p class="para">
+            Je suis <strong>Isamel Berrazzag</strong>, développeur
+            <strong>front-end &amp; embarqué</strong>,
+            <strong>vieuxchatLsd59</strong> sur GitHub. J'aime le web quand il est
+            fait main&nbsp;: des propriétés qui se déclinent, des animations qui ont
+            une raison d'être, un rendu qui ne tremble pas.
+          </p>
+          <p class="para">
+            J'ai commencé par apprendre les fondamentaux sur
+            <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer">TryHackMe</a>,
+            puis j'ai mis en pratique tout ce que j'ai appris en construisant des
+            projets de bout en bout&nbsp;: structure, design, animations, performance.
+          </p>
+          <p class="para">
+            Aujourd'hui je construis des expériences web temps réel en Canvas,
+            je m'amuse avec le CSS moderne (<code>clamp()</code>, <code>grid</code>,
+            <code>:has()</code>, <code>conic-gradient</code>) et je programme
+            des objets connectés&nbsp;: GPS, capteurs, radio LoRa, faible
+            consommation. Je documente tout ce que j'apprends.
+          </p>
+          <ul class="tags">
+            <li>#html</li>
+            <li>#css</li>
+            <li>#javascript</li>
+            <li>#canvas</li>
+            <li>#c++</li>
+            <li>#esp32</li>
+            <li>#lorawan</li>
+            <li>#iot</li>
+          </ul>
+        </div>
+
+        <div class="panel panel--term reveal">
+          <div class="panel__bar">
+            <span class="panel__dots"><i></i><i></i><i></i></span>
+            <span class="panel__title">about.txt — 32 lines</span>
+          </div>
+          <pre class="panel__body"><code><span class="c-dim">$</span> <span class="c-str">cat</span> about.txt
+
+<span class="c-key">nom</span>     : Isamel Berrazzag
+<span class="c-key">pseudo</span>  : vieuxchatLsd59
+<span class="c-key">role</span>    : Dev front-end &amp; embarqué
+<span class="c-key">base</span>    : Web / CSS / Canvas / ESP32
+<span class="c-key">github</span>  : github.com/vieuxchatLsd59
+<span class="c-key">mail</span>    : ismaelberrdbz@gmail.com
+<span class="c-key">status</span>  : <span class="c-ok">en ligne</span>
+<span class="c-key">web</span>     : HTML · CSS · JS · Canvas 2D
+<span class="c-key">embarque</span> : C++ · ESP32 · LoRaWAN · Arduino
+<span class="c-key">methode</span> : apprendre → coder → documenter
+
+<span class="c-dim"># </span><span class="c-str">2</span> projets fonctionnels,
+<span class="c-dim"># </span><span class="c-str">0</span> lib,
+une idée par commit.</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="skills">
+    <div class="wrap">
+      <p class="section__tag reveal"><span class="section__hash">##</span> 02 — compétences</p>
+      <h2 class="section__title reveal">Ce que je manipule<br />quotidiennement.</h2>
+
+      <div class="skills">
+        <div class="skill reveal">
+          <p class="skill__head"><span>HTML5 sémantique</span><span class="skill__val">85 %</span></p>
+          <div class="skill__bar"><i style="--w:85%"></i></div>
+          <p class="skill__note">accessibilité, SEO, structures sémantiques</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>CSS moderne</span><span class="skill__val">90 %</span></p>
+          <div class="skill__bar"><i style="--w:90%"></i></div>
+          <p class="skill__note">grid, flexbox, custom properties, keyframes, clamp</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>JavaScript DOM</span><span class="skill__val">70 %</span></p>
+          <div class="skill__bar"><i style="--w:70%"></i></div>
+          <p class="skill__note">événements, classes, canvas, requestAnimationFrame</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>Canvas 2D</span><span class="skill__val">65 %</span></p>
+          <div class="skill__bar"><i style="--w:65%"></i></div>
+          <p class="skill__note">particules, physique de projection, performance</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>Git & GitHub</span><span class="skill__val">75 %</span></p>
+          <div class="skill__bar"><i style="--w:75%"></i></div>
+          <p class="skill__note">branches, README, commits propres</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>UI / UX</span><span class="skill__val">60 %</span></p>
+          <div class="skill__bar"><i style="--w:60%"></i></div>
+          <p class="skill__note">hiérarchie, contraste, rythme typographique</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>C++ / Arduino</span><span class="skill__val">80 %</span></p>
+          <div class="skill__bar"><i style="--w:80%"></i></div>
+          <p class="skill__note">structures, tableaux, registres, interruptions</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>ESP32 / PlatformIO</span><span class="skill__val">75 %</span></p>
+          <div class="skill__bar"><i style="--w:75%"></i></div>
+          <p class="skill__note">brochage, SPI/I2C/UART, gestion d'alimentation</p>
+        </div>
+        <div class="skill reveal">
+          <p class="skill__head"><span>IoT / LoRaWAN</span><span class="skill__val">65 %</span></p>
+          <div class="skill__bar"><i style="--w:65%"></i></div>
+          <p class="skill__note">LMIC, payloads binaires, ACK, duty cycle</p>
+        </div>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <article class="card">
+          <h3>Ce que je sais faire</h3>
+          <ul class="list">
+            <li>Intégrer une maquette pixel-perfect</li>
+            <li>Animer sans saccader (<code>transform</code> &amp; <code>opacity</code>)</li>
+            <li>Faire un design responsive de 320&nbsp;px à 4K</li>
+            <li>Brancher un capteur sur un ESP32 et l'envoyer en LoRaWAN</li>
+            <li>Compresser des données en payload binaire</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Ce que j'apprends</h3>
+          <ul class="list">
+            <li>WebGL et shaders GLSL</li>
+            <li>TypeScript</li>
+            <li>Architecture CSS (tokens, cascade layers)</li>
+            <li>Low power &amp; deep sleep sur ESP32</li>
+            <li>Accessibilité &amp; performance</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Mon environnement</h3>
+          <ul class="list">
+            <li>VS Code + Emmet</li>
+            <li>Chrome DevTools (perf, rendu)</li>
+            <li>PlatformIO + Arduino IDE</li>
+            <li>ChirpStack (serveur LoRaWAN)</li>
+            <li>Figma pour le design</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projets">
+    <div class="wrap">
+      <p class="section__tag reveal"><span class="section__hash">##</span> 03 — projets</p>
+      <h2 class="section__title reveal">Ce que j'ai<br />déjà construit.</h2>
+
+      <div class="projects">
+        <article class="project reveal">
+          <p class="project__meta">2025 · webgl-free · 1 fichier moteur</p>
+          <h3 class="project__title glitch" data-text="PARTICULA">PARTICULA</h3>
+          <p class="project__desc">
+            Moteur de particules temps réel en Canvas 2D. Cinq distributions
+            (sphère, galaxie, hélice, cube, texte), projection en perspective,
+            remise à l'échelle par profondeur et typographie rasterisée pixel
+            par pixel. Zéro image, zéro vidéo, 100 % code.
+          </p>
+          <ul class="chips">
+            <li>Canvas 2D</li>
+            <li>requestAnimationFrame</li>
+            <li>CSS Grid</li>
+            <li>Vanilla JS</li>
+          </ul>
+          <div class="project__links">
+            <a class="btn btn--sm" href="https://github.com/vieuxchatLsd59" target="_blank" rel="noopener noreferrer">code &gt;</a>
+            <a class="btn btn--sm" href="#top">démo live &gt;</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <p class="project__meta">esp32 · lorawan · 2 cartes · fonctionnel</p>
+          <h3 class="project__title glitch" data-text="KITERIDER">KITERIDER</h3>
+          <p class="project__desc">
+            Kit de suivi pour kite-surfeur, sur deux cartes <strong>TTGO T-Beam</strong>
+            (ESP32 + SX1276 + GPS). La <strong>balise embarquée</strong> envoie sa
+            position toutes les 30 s dans un payload binaire de 14 octets
+            (lat/lon au millionième, altitude, vitesse, satellites, fix) ; la
+            <strong>station météo</strong> mesure le vent et sa direction
+            (anémomètre à reed compté par interruption, girouette sur ADC 12 bits)
+            et les envoie en 4 octets. Les deux rejoignent un serveur
+            <strong>ChirpStack</strong> en LoRaWAN, avec ACC sur chaque trame.
+          </p>
+          <ul class="chips">
+            <li>C++</li>
+            <li>ESP32</li>
+            <li>LoRaWAN / LMIC</li>
+            <li>TinyGPS++</li>
+            <li>PlatformIO</li>
+            <li>ChirpStack</li>
+          </ul>
+          <div class="project__links">
+            <a class="btn btn--sm" href="#contact">en savoir plus &gt;</a>
+          </div>
+        </article>
+
+        <article class="project project--ghost reveal">
+          <p class="project__meta">en préparation</p>
+          <h3 class="project__title">PROJET_03</h3>
+          <p class="project__desc">
+            Emplacement réservé. Le prochain projet arrive quand il sera
+            terminé, pas avant.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="parcours">
+    <div class="wrap">
+      <p class="section__tag reveal"><span class="section__hash">##</span> 04 — parcours</p>
+      <h2 class="section__title reveal">J'apprends en<br />ligne, je construis<br />en local.</h2>
+
+      <div class="grid grid--2">
+        <div class="reveal">
+          <p class="para">
+            J'ai découvert le développement web en suivant des modules de
+            <strong>TryHackMe</strong>, où j'ai travaillé le HTML et surtout
+            le <strong>CSS</strong>&nbsp;: sélecteurs, cascade, box model,
+            flexbox, grid, responsive, animations.
+          </p>
+          <p class="para">
+            Le CSS est devenu mon point fort&nbsp;: c'est le langage qui donne
+            directement le contrôle sur ce que l'utilisateur voit, et j'aime
+            cette sensation de pouvoir tout déplacer, tout déformer, tout
+            mélanger.
+          </p>
+          <p class="para">
+            Chaque notion apprise est immédiatement mise en pratique dans un
+            projet&nbsp;: c'est comme ça que mes deux projets sont nés. Côté
+            matériel, j'aime autant le défi physique&nbsp;: une T-Beam, un capteur
+            reed, un pont filaire à vérifier au multimètre — le code ne marche
+            que si le câblage est juste.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn--solid" href="https://tryhackme.com" target="_blank" rel="noopener noreferrer">Voir mon TryHackMe &gt;</a>
+            <a class="btn" href="https://github.com/vieuxchatLsd59" target="_blank" rel="noopener noreferrer">Mes repos &gt;</a>
+          </div>
+        </div>
+
+        <ol class="timeline reveal">
+          <li class="tl">
+            <p class="tl__date">début</p>
+            <h3>Découverte du web</h3>
+            <p>Premier HTML, premier <code>&lt;style&gt;</code>, premier site cassé sur Internet Explorer. La base est posée.</p>
+          </li>
+          <li class="tl">
+            <p class="tl__date">en cours</p>
+            <h3>TryHackMe — HTML &amp; CSS</h3>
+            <p>Modules de browser, box model, flexbox, grid, media queries, animations, accessibilité.</p>
+          </li>
+          <li class="tl">
+            <p class="tl__date">maintenant</p>
+            <h3>Projets de bout en bout</h3>
+            <p>PARTICULA (moteur de particules) et KiteRider (balise GPS + station météo en LoRaWAN) : concevoir, coder, mesurer, tester, documenter.</p>
+          </li>
+          <li class="tl">
+            <p class="tl__date">prochaines étapes</p>
+            <h3>WebGL, TypeScript, plus de projets</h3>
+            <p>Passer du Canvas 2D aux shaders, et publier un projet tous les mois.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="section__tag reveal"><span class="section__hash">##</span> 05 — contact</p>
+      <h2 class="section__title reveal">Un projet, une idée,<br />une collaboration&nbsp;?</h2>
+
+      <div class="grid grid--2">
+        <div class="reveal">
+          <ul class="links">
+            <li>
+              <span class="links__key">mail</span>
+              <a href="mailto:ismaelberrdbz@gmail.com">ismaelberrdbz@gmail.com</a>
+            </li>
+            <li>
+              <span class="links__key">github</span>
+              <a href="https://github.com/vieuxchatLsd59" target="_blank" rel="noopener noreferrer">github.com/vieuxchatLsd59</a>
+            </li>
+            <li>
+              <span class="links__key">tryhackme</span>
+              <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer">tryhackme.com</a>
+            </li>
+            <li>
+              <span class="links__key">statut</span>
+              <span class="links__val ok">disponible pour un projet</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel panel--term panel--live reveal">
+          <div class="panel__bar">
+            <span class="panel__dots"><i></i><i></i><i></i></span>
+            <span class="panel__title">bash — 80×24</span>
+          </div>
+          <div class="term" id="term">
+            <div class="term__out" id="termOut" aria-live="polite"></div>
+            <p class="term__line">
+              <span class="term__prompt">vieuxchatLsd59@portfolio:~$</span>
+              <input class="term__input" id="termInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal — tapez une commande" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="term__hint reveal">Commandes&nbsp;: <code>help</code> <code>about</code> <code>skills</code> <code>projects</code> <code>github</code> <code>mail</code> <code>clear</code> <code>whoami</code></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p>© <span id="year">2026</span> Isamel Berrazzag — codé à la main, sans dépendance.</p>
+    <p class="foot__meta">
+      <span class="ok">●</span> system up
+      <span class="foot__sep">|</span>
+      <span id="clock">--:--:--</span>
+      <span class="foot__sep">|</span>
+      <a href="#top">^ retour en haut</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
