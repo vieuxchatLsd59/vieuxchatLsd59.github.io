@@ -320,6 +320,10 @@ main { position: relative; z-index: 1; }
   min-height: 1em;
 }
 
+.typed-name.is-pending {
+  visibility: hidden;
+}
+
 .glitch { position: relative; }
 
 .hero__name.glitch::before,

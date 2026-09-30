@@ -122,6 +122,7 @@
         setTimeout(step, REDUCED ? 90 : 70 + Math.random() * 90);
       }
     };
+    el.classList.remove("is-pending");
     el.textContent = "";
     step();
   }
@@ -404,4 +405,9 @@
   } else {
     start();
   }
+
+  setTimeout(() => {
+    const el = $("#typedName");
+    if (el && !el.textContent) el.textContent = FULL_NAME;
+  }, 6000);
 })();
