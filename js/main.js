@@ -368,26 +368,6 @@
   }
 
   /* ---------------------------------------------------------
-     8. parallax léger sur le hero
-     --------------------------------------------------------- */
-
-  function parallax() {
-    if (REDUCED) return;
-    const ascii = $(".hero__ascii");
-    if (!ascii) return;
-    let raf = 0;
-    addEventListener("mousemove", (e) => {
-      if (raf) return;
-      raf = requestAnimationFrame(() => {
-        const dx = (e.clientX / innerWidth - 0.5) * 16;
-        const dy = (e.clientY / innerHeight - 0.5) * 10;
-        ascii.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
-        raf = 0;
-      });
-    }, { passive: true });
-  }
-
-  /* ---------------------------------------------------------
      go
      --------------------------------------------------------- */
 
@@ -398,7 +378,6 @@
     reveals();
     rain();
     typewriter();
-    parallax();
     setTimeout(boot, 180);
   };
 
