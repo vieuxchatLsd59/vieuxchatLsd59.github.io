@@ -114,16 +114,12 @@
   function typeName() {
     const el = $("#typedName");
     if (!el) return;
-    if (REDUCED) {
-      el.textContent = FULL_NAME;
-      return;
-    }
     let i = 0;
     const step = () => {
       i += 1;
       el.textContent = FULL_NAME.slice(0, i);
       if (i < FULL_NAME.length) {
-        setTimeout(step, 55 + Math.random() * 70);
+        setTimeout(step, REDUCED ? 90 : 70 + Math.random() * 90);
       }
     };
     el.textContent = "";

@@ -815,4 +815,5 @@ main { position: relative; z-index: 1; }
   .reveal { opacity: 1; transform: none; }
   .skill__bar i { width: var(--w); }
   .fx__rain { display: none; }
+  .hero__name .caret { animation: blink 1.05s steps(1) infinite !important; }
 }
