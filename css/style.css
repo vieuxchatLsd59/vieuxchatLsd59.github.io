@@ -333,6 +333,19 @@ main { position: relative; z-index: 1; }
   text-transform: uppercase;
   color: var(--ink);
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.06em;
+  flex-wrap: wrap;
+}
+
+.hero__kali {
+  width: 0.86em;
+  height: 0.86em;
+  display: inline-block;
+  vertical-align: -0.06em;
+  fill: #367bf0;
+  filter: drop-shadow(0 0 12px rgba(54, 123, 240, 0.45));
 }
 
 .glitch { position: relative; }
