@@ -27,7 +27,7 @@
 
 ## `à propos`
 
-Salut, moi c'est **Isamel Berrazzag** 👋
+Salut, moi c'est **Ismael Berrazzag** 👋
 
 - 🔭 Développeur **front-end**, obsessive de rendu fluide et de CSS propre.
 - 🔌 **Embarqué** : ESP32, capteurs, radio LoRaWAN, objets connectés basse consommation.
@@ -39,7 +39,7 @@ Salut, moi c'est **Isamel Berrazzag** 👋
 
 ```text
 $ whoami
-isamelberrazzag — dev front-end & embarqué
+ismaelberrazzag — dev front-end & embarqué
 $ ls projets
 PARTICULA   KITERIDER   PROJET_03
 $ cat ~/stack
@@ -165,7 +165,7 @@ réponse sous 48 h — probablement avec du café à côté du clavier
 
 <div align="center">
 
-**[Isamel Berrazzag](https://github.com/vieuxchatLsd59)** — portfolio one-page :
+**[Ismael Berrazzag](https://github.com/vieuxchatLsd59)** — portfolio one-page :
 [voir le site](https://vieuxchatlsd59.github.io/) ·
 [LinkedIn](https://www.linkedin.com/in/ismaelberrazzag) ·
 [Email](mailto:ismaelberrdbz@gmail.com) ·

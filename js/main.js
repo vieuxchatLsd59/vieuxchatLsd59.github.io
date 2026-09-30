@@ -16,7 +16,7 @@
     "[ OK ] initialisation du terminal vert",
     "[ OK ] compilation des animations ...... 60 fps",
     "[  ] uplink loraWAN .................. chirpstack",
-    "[ OK ] identité chargée : Isamel Berrazzag",
+    "[ OK ] identité chargée : Ismael Berrazzag",
     "[ OK ] prêt.",
   ];
 
@@ -243,11 +243,11 @@
       ].join("\n");
     },
     whoami() {
-      return "isamelberrazzag  (vieuxchatLsd59) — dev front-end & embarqué";
+      return "ismaelberrazzag  (vieuxchatLsd59) — dev front-end & embarqué";
     },
     about() {
       return [
-        "Isamel Berrazzag, développeur front-end et embarqué.",
+        "Ismael Berrazzag, développeur front-end et embarqué.",
         "Côté web : le CSS, le temps réel, les interfaces qui vivent.",
         "Côté carte : ESP32, GPS, capteurs, radio LoRaWAN.",
         "J'apprends en ligne (html / css sur tryhackme) et je construis",
