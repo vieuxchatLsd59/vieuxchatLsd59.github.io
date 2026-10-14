@@ -102,11 +102,11 @@
 
   const ROLES = [
     "développeur front-end",
-    "et embarqué — esp32, lora, capteurs",
-    "je fabrique des interfaces qui vivent",
+    "et embarqué : esp32, lora, capteurs",
+    "étudiant en cybersécurité",
     "css tous les jours, javascript dès que ça bouge",
     "canvas 2d · 0 image · 60 fps",
-    "en train d'apprendre le css sur tryhackme",
+    "en recherche d'alternance",
   ];
 
   const FULL_NAME = "ISMAEL BERRAZZAG";
@@ -255,17 +255,19 @@
         "  projects    mes projets",
         "  github      lien github",
         "  mail        lien mailto",
+        "  cv          télécharger mon cv",
         "  ls          liste les fichiers",
         "  cat about   à propos",
         "  clear       efface l'écran",
       ].join("\n");
     },
     whoami() {
-      return "ismaelberrazzag  (vieuxchatLsd59) — dev front-end & embarqué";
+      return "ismael berrazzag (vieuxchatLsd59), dev front-end et embarqué";
     },
     about() {
       return [
-        "Ismael Berrazzag, développeur front-end et embarqué.",
+        "Ismael Berrazzag, étudiant en Bachelor informatique option cybersécurité.",
+        "Je cherche une alternance à Lille ou à Paris.",
         "Côté web : le CSS, le temps réel, les interfaces qui vivent.",
         "Côté carte : ESP32, GPS, capteurs, radio LoRaWAN.",
         "J'apprends en ligne (html / css sur tryhackme) et je construis",
@@ -274,15 +276,12 @@
     },
     skills() {
       return [
-        "html5 sémantique ...... ████████░░  85 %",
-        "css moderne ........... █████████░  90 %",
-        "javascript dom ........ ███████░░░  70 %",
-        "canvas 2d ............. ██████░░░░  65 %",
-        "git & github .......... ███████░░░  75 %",
-        "ui / ux ............... ██████░░░░  60 %",
-        "c++ / arduino ......... ████████░░  80 %",
-        "esp32 / platformio .... ███████░░░  75 %",
-        "iot / lorawan ......... ██████░░░░  65 %",
+        "web ......... html, css, javascript, canvas 2d",
+        "python ...... automatisation, outils cli, tests",
+        "embarqué .... c++, arduino, esp32, platformio",
+        "iot ......... lorawan, lmic, chirpstack",
+        "cyber ....... tryhackme, pssi, audit, nmap, docker",
+        "outils ...... git, github, claude code",
       ].join("\n");
     },
     projects() {
@@ -290,7 +289,8 @@
         "[1] PARTICULA   moteur de particules temps réel en canvas 2d",
         "[2] KITERIDER   kit de suivi kitesurf : balise gps + station",
         "              météo, 2 x t-beam, loraWAN → chirpstack",
-        "[3] PROJET_03   emplacement réservé",
+        "[3] PARCOURS IA formation à l'ia façon tryhackme",
+        "[4] TP AUDIT    lab docker de 18 hôtes, scans nmap",
         "",
         "détails : voir la section #projets",
       ].join("\n");
@@ -299,18 +299,21 @@
       return "about.txt  skills.json  projects/  kiterider/  contact.env";
     },
     cat(arg) {
-      if (!arg) return "cat: argument manquant — essaie `cat about`";
+      if (!arg) return "cat: argument manquant, essaie `cat about`";
       if (/about/i.test(arg)) return COMMANDS.about();
       if (/skills/i.test(arg)) return COMMANDS.skills();
       if (/projects/i.test(arg)) return COMMANDS.projects();
-      if (/contact/i.test(arg)) return "mail: ismaelberrazzag@gmail.com\ngithub: github.com/vieuxchatLsd59";
+      if (/contact/i.test(arg)) return "mail: ismaelberrdbz@gmail.com\ngithub: github.com/vieuxchatLsd59";
       return `cat: ${arg}: aucun fichier de ce nom`;
     },
     github() {
       return "github : https://github.com/vieuxchatLsd59";
     },
     mail() {
-      return "mail : ismaelberrazzag@gmail.com";
+      return "mail : ismaelberrdbz@gmail.com";
+    },
+    cv() {
+      return "cv : https://vieuxchatlsd59.github.io/cv/CV_Ismael_Berrazzag.pdf";
     },
     clear() {
       return null;
@@ -337,7 +340,7 @@
         const [cmd, ...args] = line.split(/\s+/);
         const fn = COMMANDS[cmd.toLowerCase()];
         if (!fn) {
-          print(`${cmd}: commande introuvable — tapez \`help\`.`, "c-dim");
+          print(`${cmd}: commande introuvable, tapez \`help\`.`, "c-dim");
         } else if (cmd.toLowerCase() === "clear") {
           out.textContent = "";
         } else {
