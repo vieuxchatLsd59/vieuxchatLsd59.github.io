@@ -231,8 +231,21 @@ body.is-booting { overflow: hidden; }
 }
 
 @media (max-width: 640px) {
-  .top__nav { display: none; }
+  :root { --nav-h: 104px; }
+  .top { height: auto; min-height: var(--nav-h); padding: 10px 0; }
+  .top__inner { flex-wrap: wrap; row-gap: 10px; }
   .top__inner > .btn { margin-left: auto; }
+  .top__nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    gap: 18px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .top__nav::-webkit-scrollbar { display: none; }
 }
 
 main { position: relative; z-index: 1; }
@@ -571,31 +584,6 @@ main { position: relative; z-index: 1; }
   margin: 0 0 9px;
 }
 
-.skill__val { color: var(--green); }
-
-.skill__bar {
-  height: 6px;
-  background: rgba(0, 255, 156, 0.08);
-  border: 1px solid var(--line-soft);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.skill__bar i {
-  display: block;
-  height: 100%;
-  width: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--green) 0 8px,
-    rgba(0, 0, 0, 0.35) 8px 10px
-  );
-  box-shadow: 0 0 12px rgba(0, 255, 156, 0.55);
-  transition: width 1.3s var(--ease);
-}
-
-.is-in .skill__bar i { width: var(--w); }
-
 .skill__note { font-size: 11px; color: var(--ink-faint); margin: 9px 0 0; }
 
 .card {
@@ -817,7 +805,6 @@ main { position: relative; z-index: 1; }
     scroll-behavior: auto !important;
   }
   .reveal { opacity: 1; transform: none; }
-  .skill__bar i { width: var(--w); }
   .fx__rain { display: none; }
   .hero__name .caret { animation: blink 1.05s steps(1) infinite !important; }
 }

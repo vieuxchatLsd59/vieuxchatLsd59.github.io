@@ -15,7 +15,7 @@
     "[ OK ] chargement du noyau web ......... html css js",
     "[ OK ] initialisation du terminal vert",
     "[ OK ] compilation des animations ...... 60 fps",
-    "[  ] uplink loraWAN .................. chirpstack",
+    "[ OK ] uplink loraWAN ................. chirpstack",
     "[ OK ] identité chargée : Ismael Berrazzag",
     "[ OK ] prêt.",
   ];
@@ -91,8 +91,8 @@
     frame();
 
     addEventListener("visibilitychange", () => {
-      if (document.hidden) cancelAnimationFrame(raf);
-      else frame();
+      cancelAnimationFrame(raf);
+      if (!document.hidden) frame();
     });
   }
 
@@ -303,7 +303,7 @@
       if (/about/i.test(arg)) return COMMANDS.about();
       if (/skills/i.test(arg)) return COMMANDS.skills();
       if (/projects/i.test(arg)) return COMMANDS.projects();
-      if (/contact/i.test(arg)) return "mail: ismaelberrdbz@gmail.com\ngithub: github.com/vieuxchatLsd59";
+      if (/contact/i.test(arg)) return "mail: ismaelberrdbz@gmail.com\ngithub: https://github.com/vieuxchatLsd59";
       return `cat: ${arg}: aucun fichier de ce nom`;
     },
     github() {
@@ -326,10 +326,26 @@
     const term = $("#term");
     if (!out || !input || !term) return;
 
+    const LIEN = /(https?:\/\/\S+|[\w.+-]+@[\w-]+\.[\w.]+)/;
     const print = (text, cls) => {
       const p = document.createElement("p");
       p.className = cls || "";
-      p.textContent = text;
+      text.split(LIEN).forEach((morceau, i) => {
+        if (i % 2 === 0) {
+          p.append(morceau);
+          return;
+        }
+        const a = document.createElement("a");
+        a.textContent = morceau;
+        if (morceau.includes("@") && !morceau.startsWith("http")) {
+          a.href = `mailto:${morceau}`;
+        } else {
+          a.href = morceau;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+        }
+        p.append(a);
+      });
       out.appendChild(p);
     };
 
